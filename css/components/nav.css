@@ -1,0 +1,318 @@
+/* 
+ * Dial420 Navigation Component
+ * Sticky header with logo, menu, and mobile toggle
+ * Responsive: desktop menu, mobile hamburger
+ */
+
+/* ============================================
+   NAVIGATION CONTAINER
+   ============================================ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--charcoal);
+  border-bottom: 1px solid var(--border);
+  z-index: var(--z-sticky);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+}
+
+/* ============================================
+   LOGO & BRANDING
+   ============================================ */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: var(--size-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--dial-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-logo:hover {
+  color: var(--lime);
+}
+
+.nav-logo:focus-visible {
+  outline: 2px solid var(--dial-green);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+.nav-logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--dial-green);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--weight-bold);
+  color: var(--dial-black);
+  font-size: var(--size-lg);
+}
+
+/* ============================================
+   NAVIGATION MENU
+   ============================================ */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: var(--size-base);
+  color: var(--off-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-fast);
+  padding: var(--space-md) 0;
+  display: block;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--dial-green);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--dial-green);
+  outline-offset: 4px;
+}
+
+/* Underline animation on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--dial-green);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--dial-green);
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-md);
+  margin: calc(var(--space-md) * -1);
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--dial-green);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--off-white);
+  transition: all var(--transition-fast);
+  display: block;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   CTA BUTTON IN NAV
+   ============================================ */
+
+.nav-cta {
+  background-color: var(--dial-green);
+  color: var(--dial-black);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  font-size: var(--size-sm);
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  background-color: var(--lime);
+  transform: translateY(-2px);
+}
+
+.nav-cta:focus-visible {
+  outline: 2px solid var(--off-white);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE: TABLET & MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: var(--space-md);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--charcoal);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-menu.active {
+    max-height: 500px;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-link {
+    padding: var(--space-lg) var(--space-lg);
+    display: block;
+    text-align: left;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    background-color: rgba(127, 191, 63, 0.1);
+    border-left: 3px solid var(--dial-green);
+    padding-left: calc(var(--space-lg) - 3px);
+  }
+
+  .nav-cta {
+    margin: var(--space-md);
+    width: calc(100% - var(--space-2xl));
+    text-align: center;
+  }
+
+  .nav-logo {
+    font-size: var(--size-lg);
+  }
+
+  .nav-logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .nav-logo {
+    gap: var(--space-xs);
+    font-size: var(--size-lg);
+  }
+
+  .nav-logo-icon {
+    width: 24px;
+    height: 24px;
+    font-size: var(--size-base);
+  }
+
+  .nav-toggle {
+    gap: 5px;
+  }
+
+  .nav-toggle span {
+    width: 20px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Ensure sufficient touch target size on mobile */
+@media (max-width: 768px) {
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  .nav {
+    border-bottom-width: 2px;
+  }
+
+  .nav-link::after {
+    height: 3px;
+  }
+}
