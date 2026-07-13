@@ -1,0 +1,306 @@
+/* 
+ * Dial420 Newsletter Signup Component
+ * Email subscription form for content updates
+ * Features: form fields, validation states, success message
+ */
+
+/* ============================================
+   NEWSLETTER SECTION
+   ============================================ */
+
+.newsletter {
+  padding: var(--space-4xl) var(--space-lg);
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--dial-black) 100%);
+  border-top: 1px solid var(--border);
+}
+
+.newsletter-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================================
+   NEWSLETTER HEADER
+   ============================================ */
+
+.newsletter-label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--size-sm);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dial-green);
+  margin-bottom: var(--space-md);
+  font-weight: var(--weight-bold);
+}
+
+.newsletter-title {
+  font-size: var(--size-5xl);
+  margin-bottom: var(--space-md);
+  color: var(--off-white);
+}
+
+.newsletter-description {
+  font-size: var(--size-lg);
+  color: rgba(242, 241, 236, 0.8);
+  margin-bottom: var(--space-2xl);
+}
+
+/* ============================================
+   NEWSLETTER FORM
+   ============================================ */
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.newsletter-input {
+  flex: 1;
+  background-color: var(--charcoal);
+  border: 1px solid var(--border);
+  color: var(--off-white);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  transition: all var(--transition-fast);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(242, 241, 236, 0.5);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--dial-green);
+  background-color: var(--dial-black);
+  box-shadow: 0 0 0 3px rgba(127, 191, 63, 0.1);
+}
+
+.newsletter-input.error {
+  border-color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.05);
+}
+
+.newsletter-input.success {
+  border-color: var(--dial-green);
+  background-color: rgba(127, 191, 63, 0.05);
+}
+
+/* ============================================
+   NEWSLETTER SUBMIT BUTTON
+   ============================================ */
+
+.newsletter-submit {
+  background-color: var(--dial-green);
+  color: var(--dial-black);
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--dial-green);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.newsletter-submit:hover {
+  background-color: var(--lime);
+  border-color: var(--lime);
+  transform: translateY(-2px);
+}
+
+.newsletter-submit:focus-visible {
+  outline: 2px solid var(--off-white);
+  outline-offset: 4px;
+}
+
+.newsletter-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============================================
+   NEWSLETTER CHECKBOX
+   ============================================ */
+
+.newsletter-checkbox-group {
+  text-align: left;
+  padding: var(--space-lg);
+  background-color: rgba(127, 191, 63, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--size-sm);
+}
+
+.newsletter-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.newsletter-checkbox input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--dial-green);
+}
+
+.newsletter-checkbox-label {
+  color: rgba(242, 241, 236, 0.85);
+  cursor: pointer;
+  flex: 1;
+}
+
+.newsletter-checkbox-label a {
+  color: var(--dial-green);
+  font-weight: var(--weight-bold);
+}
+
+.newsletter-checkbox-label a:hover {
+  color: var(--lime);
+}
+
+/* ============================================
+   NEWSLETTER MESSAGES
+   ============================================ */
+
+.newsletter-message {
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-size: var(--size-sm);
+  display: none;
+}
+
+.newsletter-message.show {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.newsletter-message.success {
+  background-color: rgba(127, 191, 63, 0.1);
+  border: 1px solid var(--dial-green);
+  color: var(--dial-green);
+}
+
+.newsletter-message.error {
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+}
+
+/* ============================================
+   NEWSLETTER PRIVACY NOTE
+   ============================================ */
+
+.newsletter-privacy {
+  font-size: var(--size-xs);
+  color: rgba(242, 241, 236, 0.6);
+  margin-top: var(--space-lg);
+}
+
+.newsletter-privacy a {
+  color: var(--dial-green);
+}
+
+/* ============================================
+   RESPONSIVE: TABLET
+   ============================================ */
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: var(--space-3xl) var(--space-lg);
+  }
+
+  .newsletter-title {
+    font-size: var(--size-4xl);
+  }
+
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+
+  .newsletter-submit {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: MOBILE
+   ============================================ */
+
+@media (max-width: 480px) {
+  .newsletter {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .newsletter-title {
+    font-size: var(--size-3xl);
+  }
+
+  .newsletter-description {
+    font-size: var(--size-base);
+  }
+
+  .newsletter-checkbox-group {
+    padding: var(--space-md);
+  }
+
+  .newsletter-checkbox-label {
+    font-size: var(--size-xs);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-contrast: more) {
+  .newsletter-input {
+    border-width: 2px;
+  }
+
+  .newsletter-submit {
+    border-width: 3px;
+  }
+
+  .newsletter-checkbox-group {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .newsletter-message {
+    animation: none;
+  }
+
+  .newsletter-submit,
+  .newsletter-input {
+    transition: none;
+  }
+}
