@@ -1,0 +1,347 @@
+/* 
+ * Dial420 Base Styles
+ * Global resets, typography, and dark theme foundation
+ * Includes: normalize, typography, dark background, accessibility
+ */
+
+/* ============================================
+   RESETS & FOUNDATIONAL STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body), var(--font-fallback);
+  font-size: var(--size-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-normal);
+  color: var(--off-white);
+  background-color: var(--dial-black);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+  color: var(--off-white);
+}
+
+h1 {
+  font-size: var(--size-6xl);
+  margin-bottom: var(--space-lg);
+}
+
+h2 {
+  font-size: var(--size-5xl);
+  margin-bottom: var(--space-lg);
+}
+
+h3 {
+  font-size: var(--size-4xl);
+  margin-bottom: var(--space-md);
+}
+
+h4 {
+  font-size: var(--size-3xl);
+  margin-bottom: var(--space-md);
+}
+
+h5 {
+  font-size: var(--size-2xl);
+  margin-bottom: var(--space-md);
+}
+
+h6 {
+  font-size: var(--size-xl);
+  margin-bottom: var(--space-md);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+  color: var(--dial-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--lime);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--dial-green);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   IMAGES & MEDIA
+   ============================================ */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-radius: var(--radius-md);
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--charcoal);
+  border: 1px solid var(--border);
+  color: var(--off-white);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--dial-green);
+  background-color: var(--dial-black);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(242, 241, 236, 0.5);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: var(--charcoal);
+  font-weight: var(--weight-bold);
+}
+
+/* ============================================
+   CODE & MONOSPACE
+   ============================================ */
+
+code,
+pre {
+  font-family: 'Monaco', 'Courier New', monospace;
+  background-color: var(--charcoal);
+  border-radius: var(--radius-md);
+  color: var(--lime);
+}
+
+code {
+  padding: var(--space-xs) var(--space-sm);
+  display: inline-block;
+}
+
+pre {
+  padding: var(--space-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  display: block;
+}
+
+/* ============================================
+   BLOCKQUOTES
+   ============================================ */
+
+blockquote {
+  border-left: 4px solid var(--dial-green);
+  padding-left: var(--space-lg);
+  margin-left: 0;
+  margin-bottom: var(--space-md);
+  font-style: italic;
+  color: rgba(242, 241, 236, 0.8);
+}
+
+/* ============================================
+   HORIZONTAL RULE
+   ============================================ */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-2xl) 0;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Visually hide content but keep accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Container for content width */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--size-5xl);
+  }
+
+  h2 {
+    font-size: var(--size-4xl);
+  }
+
+  h3 {
+    font-size: var(--size-3xl);
+  }
+
+  h4 {
+    font-size: var(--size-2xl);
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: var(--size-4xl);
+  }
+
+  h2 {
+    font-size: var(--size-3xl);
+  }
+
+  h3 {
+    font-size: var(--size-2xl);
+  }
+
+  h4 {
+    font-size: var(--size-xl);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   DARK MODE (already our default, but explicit)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dial-black);
+    color: var(--off-white);
+  }
+}
