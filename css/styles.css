@@ -1,105 +1,115 @@
-/* --- System Reset & Variables --- */
 :root {
-    --bg-color: #0a0a0a;
-    --text-color: #ededed;
-    --accent-color: #ff3333;
-    --border-color: #262626;
-    --font-mono: 'Courier New', Courier, monospace;
-    --font-serif: 'Georgia', serif;
+  --bg-color: #0a0a0a;
+  --text-color: #ededed;
+  --muted-color: #8a8a8a;
+  --accent-color: #ff3333;
+  --border-color: #262626;
+
+  --font-mono: "Courier New", Courier, monospace;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+
+  --content-width: 1200px;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-serif);
-    line-height: 1.6;
-    padding: 2rem;
+  margin: 0;
+  padding: 0;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  font-family: var(--font-mono);
+  line-height: 1.6;
 }
 
-/* --- Layout Architecture --- */
-.masthead {
-    border-bottom: 2px solid var(--text-color);
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.masthead h1 {
-    font-family: var(--font-mono);
-    font-size: 3.5rem;
-    letter-spacing: -2px;
-    font-weight: 900;
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-.masthead .subtitle {
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    color: #888;
+a:hover {
+  color: var(--accent-color);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    align-items: start;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
-.lane {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
+h1,
+h2,
+h3 {
+  line-height: 1.15;
 }
 
-.lane h2 {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
+h1,
+h2 {
+  font-family: var(--font-serif);
 }
 
-/* --- Components --- */
-.entry h3, .project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
+p {
+  max-width: 70ch;
 }
 
-.entry time {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 1rem;
+section {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+  padding-block: var(--space-lg);
 }
 
-.log-list {
-    list-style: none;
+section > p:first-child {
+  color: var(--accent-color);
+
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.log-list a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
+article {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-md);
 }
 
-.log-list a:hover {
-    color: var(--accent-color);
+article > p:first-child {
+  color: var(--muted-color);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.system-footer {
-    margin-top: 4rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: #444;
-    text-align: center;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  section {
+    width: min(100% - 4rem, var(--content-width));
+    padding-block: var(--space-xl);
+  }
 }
