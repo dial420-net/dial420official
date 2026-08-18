@@ -281,7 +281,32 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.podcast {
+  border-top: var(--border-width) var(--border-style) var(--border-color);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
 
+.podcast article {
+  padding-block: var(--space-lg);
+}
+
+.podcast article h2 {
+  max-width: 12ch;
+}
+
+.podcast article > p:nth-of-type(2) {
+  max-width: 60ch;
+  color: var(--muted-color);
+}
+
+.podcast article a {
+  display: inline-block;
+  margin-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 @media (min-width: 768px) {
   .content-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
