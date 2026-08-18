@@ -194,7 +194,32 @@ section > p:first-child {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+.signal {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.signal h2 {
+  max-width: 14ch;
+}
+
+.signal > p:nth-of-type(2) {
+  max-width: 60ch;
+  color: var(--muted-color);
+}
+
+.signal a {
+  display: inline-block;
+  margin-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 article {
   border-top: 1px solid var(--border-color);
   padding-top: var(--space-md);
