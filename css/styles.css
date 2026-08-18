@@ -1,4 +1,4 @@
-:root {
+":root {
   /* =========================
      COLORS
      ========================= */
@@ -130,6 +130,22 @@ h2 {
 h3 {
   font-family: var(--font-mono);
   font-weight: 400;
+}
+
+h1 {
+  font-size: var(--text-display);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h3 {
+  font-size: var(--text-md);
+}
+
+p {
+  max-width: 70ch;
 }
 
 p {
