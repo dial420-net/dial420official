@@ -1,12 +1,35 @@
 :root {
+  /* =========================
+     COLORS
+     ========================= */
+
   --bg-color: #0a0a0a;
+  --surface-color: #111111;
   --text-color: #ededed;
   --muted-color: #8a8a8a;
   --accent-color: #ff3333;
   --border-color: #262626;
 
+
+  /* =========================
+     TYPOGRAPHY
+     ========================= */
+
   --font-mono: "Courier New", Courier, monospace;
   --font-serif: Georgia, "Times New Roman", serif;
+
+  --text-xs: 0.7rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 2rem;
+  --text-xl: 3rem;
+  --text-display: clamp(3rem, 8vw, 7rem);
+
+
+  /* =========================
+     SPACING
+     ========================= */
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -14,7 +37,21 @@
   --space-lg: 4rem;
   --space-xl: 7rem;
 
+
+  /* =========================
+     LAYOUT
+     ========================= */
+
   --content-width: 1200px;
+  --reading-width: 70ch;
+
+
+  /* =========================
+     BORDERS
+     ========================= */
+
+  --border-width: 1px;
+  --border-style: solid;
 }
 
 * {
