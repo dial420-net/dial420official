@@ -148,9 +148,6 @@ p {
   max-width: 70ch;
 }
 
-p {
-  max-width: 70ch;
-}
 
 section {
   width: min(100% - 2rem, var(--content-width));
