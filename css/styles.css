@@ -252,7 +252,31 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.content-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
 
+.content-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-grid article a {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 ul {
   margin: 0;
   padding: 0;
