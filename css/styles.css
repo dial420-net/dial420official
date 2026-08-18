@@ -224,7 +224,27 @@ article {
   border-top: 1px solid var(--border-color);
   padding-top: var(--space-md);
 }
+.featured article {
+  padding-block: var(--space-lg);
+}
 
+.featured article h2 {
+  max-width: 18ch;
+}
+
+.featured article > p:nth-of-type(2) {
+  max-width: 60ch;
+  color: var(--muted-color);
+}
+
+.featured article a {
+  display: inline-block;
+  margin-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 article > p:first-child {
   color: var(--muted-color);
 
