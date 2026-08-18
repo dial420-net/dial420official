@@ -261,7 +261,17 @@ article > p:first-child {
   display: flex;
   flex-direction: column;
 }
+.content-grid article h3 {
+  max-width: 24ch;
+}
 
+.content-grid article p {
+  color: var(--muted-color);
+}
+
+.content-grid article > p:first-child {
+  color: var(--muted-color);
+}
 .content-grid article a {
   display: inline-block;
   margin-top: auto;
