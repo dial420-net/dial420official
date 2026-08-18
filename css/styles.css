@@ -145,7 +145,7 @@ h3 {
 }
 
 p {
-  max-width: 70ch;
+  max-width: var(--reading-width);
 }
 
 
