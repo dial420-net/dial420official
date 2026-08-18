@@ -73,10 +73,15 @@ body {
   color: var(--text-color);
 
   font-family: var(--font-mono);
+  font-size: var(--text-base);
   line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
 }
 
-img {
+img,
+svg,
+video {
   max-width: 100%;
   height: auto;
   display: block;
