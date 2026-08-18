@@ -78,7 +78,37 @@ body {
 
   text-rendering: optimizeLegibility;
 }
+header {
+  width: min(100% - 2rem, var(--content-width));
+  min-width: 0;
+  margin-inline: auto;
+  padding-block: var(--space-lg);
 
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+
+header p {
+  margin-bottom: var(--space-sm);
+
+  color: var(--muted-color);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+header h1 {
+  margin-bottom: var(--space-sm);
+
+  font-size: var(--text-display);
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 768px) {
+  header {
+    width: min(100% - 4rem, var(--content-width));
+    padding-block: var(--space-xl);
+  }
+}
 img,
 svg,
 video {
