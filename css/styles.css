@@ -426,7 +426,45 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+/* =========================
+   CANNABIS EDUCATION
+   ========================= */
 
+.education {
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+}
+
+.education .content-grid {
+  margin-top: var(--space-md);
+}
+
+.education article {
+  padding-block: var(--space-lg);
+}
+
+.education article h3 {
+  max-width: 20ch;
+}
+
+.education article p {
+  color: var(--muted-color);
+}
+
+.education article > p:first-child {
+  color: var(--muted-color);
+}
+
+.education article a {
+  display: inline-block;
+  margin-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
 /* =========================
    LISTS
