@@ -324,3 +324,6 @@ ul {
     padding-block: var(--space-xl);
   }
 }
+body {
+  background: #ff0000 !important;
+}
