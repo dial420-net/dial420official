@@ -497,7 +497,49 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+/* =========================
+   EXPLORE DIAL 420
+   ========================= */
 
+.channels {
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+}
+
+.channels h2 {
+  max-width: 14ch;
+}
+
+.channels ul {
+  margin-top: var(--space-lg);
+}
+
+.channels li {
+  border-top:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+}
+
+.channels li:last-child {
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+}
+
+.channels li a {
+  display: block;
+  padding-block: var(--space-md);
+
+  font-size: var(--text-md);
+}
+
+.channels li a:hover {
+  padding-left: var(--space-sm);
+}
 /* =========================
    LISTS
    ========================= */
