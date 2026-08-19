@@ -325,5 +325,5 @@ ul {
   }
 }
 body {
-  background: #ff0000 !important;
+  background: var(--bg-color) !important;
 }
