@@ -465,6 +465,38 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+/* =========================
+   MICHIGAN COMMUNITY
+   ========================= */
+
+.community {
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+}
+
+.community article {
+  padding-block: var(--space-lg);
+}
+
+.community article h2 {
+  max-width: 16ch;
+}
+
+.community article > p:nth-of-type(2) {
+  max-width: 60ch;
+  color: var(--muted-color);
+}
+
+.community article a {
+  display: inline-block;
+  margin-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
 /* =========================
    LISTS
