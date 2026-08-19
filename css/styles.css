@@ -1,4 +1,4 @@
-":root {
+:root {
   /* =========================
      COLORS
      ========================= */
@@ -54,11 +54,21 @@
   --border-style: solid;
 }
 
+
+/* =========================
+   GLOBAL RESET
+   ========================= */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+
+/* =========================
+   DOCUMENT
+   ========================= */
 
 html {
   scroll-behavior: smooth;
@@ -69,7 +79,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
 
   font-family: var(--font-mono);
@@ -78,37 +88,12 @@ body {
 
   text-rendering: optimizeLegibility;
 }
-header {
-  width: min(100% - 2rem, var(--content-width));
-  min-width: 0;
-  margin-inline: auto;
-  padding-block: var(--space-lg);
 
-  border-bottom: var(--border-width) var(--border-style) var(--border-color);
-}
 
-header p {
-  margin-bottom: var(--space-sm);
+/* =========================
+   MEDIA
+   ========================= */
 
-  color: var(--muted-color);
-  font-size: var(--text-xs);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-header h1 {
-  margin-bottom: var(--space-sm);
-
-  font-size: var(--text-display);
-  letter-spacing: -0.04em;
-}
-
-@media (min-width: 768px) {
-  header {
-    width: min(100% - 4rem, var(--content-width));
-    padding-block: var(--space-xl);
-  }
-}
 img,
 svg,
 video {
@@ -116,6 +101,11 @@ video {
   height: auto;
   display: block;
 }
+
+
+/* =========================
+   FORMS
+   ========================= */
 
 button,
 input,
@@ -128,6 +118,11 @@ button {
   cursor: pointer;
 }
 
+
+/* =========================
+   LINKS
+   ========================= */
+
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -136,6 +131,11 @@ a {
 a:hover {
   color: var(--accent-color);
 }
+
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
 
 h1,
 h2,
@@ -179,6 +179,43 @@ p {
 }
 
 
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  width: min(100% - 2rem, var(--content-width));
+  min-width: 0;
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+}
+
+header p {
+  margin-bottom: var(--space-sm);
+
+  color: var(--muted-color);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+header h1 {
+  margin-bottom: var(--space-sm);
+
+  font-size: var(--text-display);
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
 section {
   width: min(100% - 2rem, var(--content-width));
   min-width: 0;
@@ -190,17 +227,49 @@ section > p:first-child {
   color: var(--accent-color);
 
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+
+/* =========================
+   ARTICLES
+   ========================= */
+
+article {
+  border-top:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+
+  padding-top: var(--space-md);
+}
+
+article > p:first-child {
+  color: var(--muted-color);
+
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   CURRENT SIGNAL
+   ========================= */
+
 .signal {
   min-height: 70vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
 }
 
 .signal h2 {
@@ -220,10 +289,12 @@ section > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-article {
-  border-top: 1px solid var(--border-color);
-  padding-top: var(--space-md);
-}
+
+
+/* =========================
+   FEATURED STORY
+   ========================= */
+
 .featured article {
   padding-block: var(--space-lg);
 }
@@ -245,13 +316,12 @@ article {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-article > p:first-child {
-  color: var(--muted-color);
 
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+
+/* =========================
+   CONTENT GRID
+   ========================= */
+
 .content-grid {
   display: grid;
   gap: var(--space-lg);
@@ -261,6 +331,7 @@ article > p:first-child {
   display: flex;
   flex-direction: column;
 }
+
 .content-grid article h3 {
   max-width: 24ch;
 }
@@ -272,6 +343,7 @@ article > p:first-child {
 .content-grid article > p:first-child {
   color: var(--muted-color);
 }
+
 .content-grid article a {
   display: inline-block;
   margin-top: auto;
@@ -281,9 +353,22 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+
+/* =========================
+   PODCAST
+   ========================= */
+
 .podcast {
-  border-top: var(--border-width) var(--border-style) var(--border-color);
-  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+  border-top:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
+
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
 }
 
 .podcast article {
@@ -307,20 +392,71 @@ article > p:first-child {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
-  .content-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+
+
+/* =========================
+   BUDTENDER NETWORK
+   ========================= */
+
+.budtenders {
+  border-bottom:
+    var(--border-width)
+    var(--border-style)
+    var(--border-color);
 }
+
+.budtenders article {
+  padding-block: var(--space-lg);
+}
+
+.budtenders article h2 {
+  max-width: 16ch;
+}
+
+.budtenders article > p:nth-of-type(2) {
+  max-width: 60ch;
+  color: var(--muted-color);
+}
+
+.budtenders article a {
+  display: inline-block;
+  margin-top: var(--space-md);
+
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   LISTS
+   ========================= */
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (min-width: 768px) {
+
+  header {
+    width: min(100% - 4rem, var(--content-width));
+    padding-block: var(--space-xl);
+  }
+
   section {
     width: min(100% - 4rem, var(--content-width));
     padding-block: var(--space-xl);
   }
+
+  .content-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
 }
