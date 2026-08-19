@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Budtender Network — Dial 420</title>
+
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <p>Dial 420 / Budtender Network</p>
+
+    <h1>Meet the Network</h1>
+
+    <p>
+      The people behind the counter.
+      The knowledge behind the conversation.
+    </p>
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         NETWORK INTRO
+         ========================= -->
+
+    <section>
+
+      <p>Michigan / Budtender Network</p>
+
+      <h2>People who know the plant.</h2>
+
+      <p>
+        Dial 420 is building a living network of Michigan
+        budtenders—their experience, their knowledge, and
+        their perspectives on cannabis.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         NETWORK DIRECTORY
+         ========================= -->
+
+    <section>
+
+      <p>The Network</p>
+
+      <div class="content-grid">
+
+        <article>
+          <p>01 / Coming Soon</p>
+
+          <h3>Budtender Profiles</h3>
+
+          <p>
+            Individual profiles are being developed as
+            the Dial 420 network grows.
+          </p>
+
+          <a href="#">
+            View Profiles →
+          </a>
+        </article>
+
+
+        <article>
+          <p>02 / Knowledge</p>
+
+          <h3>From Behind the Counter</h3>
+
+          <p>
+            Practical knowledge, observations, and stories
+            from people who work directly with cannabis
+            consumers.
+          </p>
+
+          <a href="../../education/index.html">
+            Explore Education →
+          </a>
+        </article>
+
+
+        <article>
+          <p>03 / Community</p>
+
+          <h3>Michigan Cannabis Culture</h3>
+
+          <p>
+            The people, relationships, and communities
+            shaping Michigan's cannabis conversation.
+          </p>
+
+          <a href="../../index.html">
+            Explore Dial 420 →
+          </a>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         JOIN THE NETWORK
+         ========================= -->
+
+    <section>
+
+      <p>Join the Network</p>
+
+      <h2>The network starts with people.</h2>
+
+      <p>
+        Every budtender brings knowledge, experience,
+        personality, and perspective to the cannabis
+        conversation.
+      </p>
+
+      <p>
+        Dial 420 is building a space where those voices
+        can be recognized and connected.
+      </p>
+
+      <a href="../index.html">
+        ← Back to Budtenders
+      </a>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
